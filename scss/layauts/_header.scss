@@ -1,0 +1,119 @@
+.header {
+  width: 100%;
+  background: #f2f2f2;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  box-shadow: 0 0 20px 1px #00000099;
+
+  @include lg {
+    padding: 20px 0;
+  }
+
+  @include md {
+    padding: 15px 0;
+  }
+
+  @include sm {
+    padding: 10px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+
+  &__logo {
+    width: 142px;
+
+    @include lg {
+      width: 100px;
+    }
+
+    @include md {
+      width: 85px;
+    }
+
+    @include sm {
+      width: 60px;
+    }
+  }
+
+  &__menu,
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    @include lg {
+      gap: 50px;
+    }
+
+    @include md {
+      gap: 30px;
+    }
+
+    @include sm {
+      gap: 15px;
+    }
+  }
+
+  &__menu-item {
+    a {
+      text-decoration: none;
+      @include font(500, 17px, 20px, $headerNavTextcolor);
+      position: relative;
+
+      @include lg {
+        @include font(500, 15px, 18px, $headerNavTextcolor);
+      }
+
+      @include md {
+        @include font(500, 14px, 16px, $headerNavTextcolor);
+      }
+
+      @include sm {
+        @include font(400, 12px, 14px, $headerNavTextcolor);
+      }
+      &::before {
+        content: "";
+        height: 2px;
+        width: 0%;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $blue;
+        border-radius: 3px;
+        transition: width 0.3s ease;
+      }
+    }
+
+    &:hover {
+      a {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    &.active a {
+      color: $blue;
+      &::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: -5px;
+        background-color: $blue;
+        border-radius: 3px;
+      }
+    }
+  }
+}

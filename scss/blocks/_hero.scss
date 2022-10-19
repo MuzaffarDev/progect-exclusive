@@ -1,0 +1,53 @@
+.hero {
+  padding-top: 100px;
+  background-color: $header-bg-color;
+  overflow: hidden;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    right: 0;
+    bottom: -20%;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    // gap: 120px;
+  }
+
+  &__info {
+    width: 633px;
+  }
+
+  &__title {
+    @include font(900, 56px, 66px, $heroTitleColor);
+    margin-bottom: 55px;
+  }
+
+  &__description {
+    @include font();
+    margin-bottom: 42px;
+  }
+
+  &__btn {
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 50px;
+  }
+
+  &__banner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 470px;
+    z-index: 1000;
+  }
+}

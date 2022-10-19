@@ -1,0 +1,49 @@
+.our__services {
+  padding: 122px 245px 110px 245px;
+
+  &-content {
+    margin-bottom: 110px;
+  }
+
+  .services__card {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      // display: grid;
+      // grid-template-columns: repeat(auto-fill, minmax(150px, 344px));
+      // justify-content: center;
+    }
+
+    &-item {
+      word-break: break-all;
+
+
+    }
+
+    &-img {
+      width: 76px;
+      height: 76px;
+      // background-color: ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 38px;
+
+      img {
+        width: 37px;
+        height: 37px;
+      }
+    }
+
+    &-titli {
+      @include font(700, 24px, 37px, #37474f);
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      @include font(500, 16px, 28px, #33474fb8);
+    }
+  }
+}

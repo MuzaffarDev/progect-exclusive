@@ -1,0 +1,70 @@
+.upcoving {
+  padding: 95px 155px;
+  background: $header-bg-color;
+
+  &__card {
+    padding: 100px 0;
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 47px;
+    }
+
+    &-item {
+      word-break: break-all;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    &-date {
+      width: 76px;
+      height: 76px;
+      background: $violet;
+      mix-blend-mode: normal;
+      opacity: 0.14;
+      border-radius: 11px;
+      overflow: hidden;
+      .num,
+      .month {
+        font-weight: 700;
+        font-size: 27px;
+        text-transform: uppercase;
+        line-height: 32px;
+        text-align: center;
+        color: $violet;
+      }
+    }
+    &-text {
+      @include font(700, 24px, 37px, #37474f);
+    }
+
+    &-info {
+      @include font(500, 16px, 28px, rgba(55, 71, 79, 0.721569));
+    }
+
+    &-time {
+      display: flex;
+      align-items: center;
+      gap: 152px;
+
+      img {
+        width: 17px;
+        height: 17px;
+      }
+      .datetime {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        @include font(900, 16px, 28px, $headerNavTextcolor);
+        letter-spacing: 0.444444px;
+      }
+    }
+  }
+}

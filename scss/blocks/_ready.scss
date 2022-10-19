@@ -1,0 +1,15 @@
+.ready {
+  padding: 82px 0px 74px;
+  background: $slider-bg-color;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 392px;
+  }
+
+  &__title {
+    @include font(700,37px,43px,#252525)
+
+  }
+}

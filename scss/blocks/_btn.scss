@@ -1,0 +1,76 @@
+.header__button {
+  button {
+    padding: 11px 33px;
+    @include font(500, 17px, 20px, #505050);
+    border: 2px solid #717cff;
+    border-radius: 11px;
+
+    @include lg {
+      padding: 9px 30px;
+      @include font(500, 15px, 18px, #505050);
+    }
+
+    @include md {
+      padding: 7px 24px;
+      @include font(500, 14px, 16px, #505050);
+    }
+
+    @include sm {
+      padding: 5px 18px;
+      border: 1px solid #717cff;
+      border-radius: 5px;
+      @include font(400, 12px, 14px, #505050);
+    }
+
+    &:hover,
+    :focus {
+      cursor: pointer;
+      border: 2px solid transparent;
+      background-color: $blue;
+      color: white;
+    }
+
+    &:active {
+      border: 2px solid transparent;
+      background-color: $green;
+      color: #ffffff;
+    }
+  }
+}
+
+.global-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 12px 34px;
+  @include font(500, 22px, 40px, #ffffff);
+  background: $violet;
+  border: none;
+  border-radius: 11px;
+  outline: none;
+  gap: 30px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #1f2fe0;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: $green;
+    color: #ffffff;
+  }
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    @include font(700, 17px, 20px, $violet);
+    letter-spacing: 0.439286px;
+    gap: 16px;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+  }

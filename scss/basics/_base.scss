@@ -1,0 +1,118 @@
+body {
+  font-family: "Roboto", "Tahoma", serif;
+  user-select: none;
+
+  // sozlarni belgilab bolmaydigan qilish buni kerakli joyga shu kod beriladi
+}
+
+::selection {
+  color: $heroTitleColor;
+  background-color: $violet;
+}
+
+.wrapper {
+  padding-top: 130px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include lg {
+    padding-top: 90px;
+  }
+
+  @include md {
+    padding-top: 60px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+  }
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card {
+  width: 344px;
+  padding: 30px 15px 30px 30px;
+  background: $card-bg-white;
+  box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 2s ease;
+    scale: 1.1;
+  }
+}
+
+.news-card {
+  width: 344px;
+  background: $card-bg-white;
+  box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 2s ease;
+    scale: 1.1;
+  }
+}
+
+.upcoving-card {
+  width: 540px;
+  padding: 30px;
+  background: $card-bg-white;
+  box-shadow: 0px 6px 42px rgba(0, 0, 0, 0.103884);
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 2s ease;
+    scale: 1.1;
+  }
+}
+
+.countries-card {
+  width: 348px;
+  // padding: 30px 15px 30px 30px;
+  // background: $card-bg-white;
+  // box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 2s ease;
+    scale: 1.1;
+  }
+}
+
+.testimonial-card {
+  width: 500px;
+  padding: 44px 34px;
+  box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+  border-radius: 29px;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 2s ease;
+    scale: 1.1;
+  }
+}
+
+
+.btn-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(103deg)
+    brightness(100%) contrast(100%);
+}

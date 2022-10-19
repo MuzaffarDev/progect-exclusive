@@ -1,0 +1,28 @@
+.countries {
+  padding: 80px 120px;
+  background: $slider-bg-color;
+
+  &__card {
+    padding: 70px 0;
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 45px;
+    }
+
+    &-item {
+      word-break: break-all;
+    }
+
+    &-title {
+      @include font(900, 25px, 29px, #37474f);
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      @include font(500,16px,27px,rgba(55, 71, 79, 0.721569));
+    }
+  }
+}
