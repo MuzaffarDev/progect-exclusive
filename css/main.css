@@ -891,7 +891,6 @@ body {
 .testimonial .testimonial__card-list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 60px;
 }
 .testimonial .testimonial__card-item {
