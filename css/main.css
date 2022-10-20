@@ -564,7 +564,7 @@ body {
 
 .convert {
   display: inline-block;
-  width: 1000%;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: no-wrap;
   overflow: hidden;
@@ -880,6 +880,9 @@ body {
   padding-bottom: 100px;
   gap: 75px;
 }
+.slider__img {
+  width: 250px;
+}
 
 .testimonial {
   padding: 115px 245px;
@@ -948,8 +951,7 @@ body {
 .upcoving__card-date {
   width: 76px;
   height: 76px;
-  background: #717cff;
-  mix-blend-mode: normal;
+  background-color: #717cff;
   opacity: 0.14;
   border-radius: 11px;
   overflow: hidden;
