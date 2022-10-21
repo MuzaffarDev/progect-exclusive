@@ -556,9 +556,16 @@ body {
 }
 
 .webkit-box {
-  display: -webkit-box 1;
-  -wekit__line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden;
+}
+
+.webkit-thre-box {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 10 !important;
+  -webkit-box-orient: vertical !important;
   overflow: hidden;
 }
 
