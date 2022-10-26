@@ -4,50 +4,219 @@
   overflow: hidden;
   position: relative;
 
+  @include lg {
+    padding-top: 50px;
+  }
+
+  @include md {
+    padding-top: 40px;
+  }
+  @include sm {
+    padding-top: 35px;
+  }
+  @include xs {
+    padding-top: 30px;
+  }
+
   &__bg {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: bottom right;
     right: 0;
-    bottom: -20%;
+    bottom: -10%;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    transform: translateX(50%);
+
+    @include lg {
+      right: 0;
+      bottom: -20%;
+      width: 700px;
+      height: 525px;
+    }
+
+    @include md {
+      right: -80px;
+      bottom: -40%;
+      width: 700px;
+      height: 500px;
+    }
+
+    @include sm {
+      display: none;
+    }
+    @include xs {
+      display: none;
+    }
   }
 
   &__content {
     display: flex;
     align-items: center;
     position: relative;
-    // gap: 120px;
+
+    @include sm {
+      flex-direction: column;
+      text-align: center;
+    }
+    @include xs {
+      flex-direction: column;
+      text-align: left;
+    }
   }
 
   &__info {
     width: 633px;
+
+    @include lg {
+      width: 550px;
+    }
+
+    @include md {
+      width: 450px;
+    }
+
+    @include sm {
+      width: 300px;
+    }
+
+    @include xs {
+      width: 200px;
+    }
   }
 
   &__title {
     @include font(900, 56px, 66px, $heroTitleColor);
     margin-bottom: 55px;
+
+    @include lg {
+      @include font(900, 48px, 56px, $heroTitleColor);
+      margin-bottom: 48px;
+    }
+
+    @include md {
+      @include font(900, 40px, 48px, $heroTitleColor);
+      margin-bottom: 24px;
+    }
+
+    @include sm {
+      @include font(700, 32px, 40px, $heroTitleColor);
+      margin-bottom: 16px;
+    }
+    @include xs {
+      @include font(500, 14px, 24px, $heroTitleColor);
+      margin-bottom: 8px;
+    }
   }
 
   &__description {
-    @include font();
+    @include font(500, 22px, 38px, $textColor: $globalTextColor);
     margin-bottom: 42px;
+
+    @include lg {
+      @include font(500, 20px, 40px);
+      margin-bottom: 42px;
+    }
+
+    @include md {
+      @include font(500, 16px, 32px);
+      margin-bottom: 32px;
+    }
+
+    @include sm {
+      @include font(500, 12px, 24px);
+      margin-bottom: 24px;
+    }
+    @include xs {
+      @include font(400, 8px, 16px);
+      margin-bottom: 16px;
+    }
   }
 
   &__btn {
+    margin-bottom: 100px;
+
+    @include lg {
+      margin-bottom: 80px;
+    }
+    @include md {
+      margin-bottom: 60px;
+    }
+
+    @include sm {
+      margin-bottom: 40px;
+    }
+    @include xs {
+      margin-bottom: 20px;
+    }
   }
 
   &__social {
+    gap: 16px;
     display: flex;
     align-items: center;
-    gap: 15px;
     padding-bottom: 50px;
+
+    @include lg {
+      gap: 14px;
+      padding-bottom: 45px;
+
+      @include md {
+        gap: 12px;
+        padding-bottom: 25px;
+      }
+
+      @include sm {
+        gap: 10px;
+        padding-bottom: 15px;
+        justify-content: center;
+
+        @include xs {
+          gap: 8px;
+          padding-bottom: 10px;
+          justify-content: center;
+        }
+      }
+      /*  &-logo {
+        width: 20px;
+        height: 20px;
+      } */
+
+      // &-logo {
+      //   width: 16px;
+      //   height: 16px;
+      // }
+
+      // &-logo {
+      //   width: 16px;
+      //   height: 16px;
+      // }
+    }
+
+    // &-logo {
+    //   width: 16px;
+    //   height: 16px;
+    // }
   }
 
   &__banner {
-    position: absolute;
     right: 0;
     bottom: 0;
     width: 470px;
     z-index: 1000;
+    position: absolute;
+
+    @include lg {
+      width: 380px;
+    }
+
+    @include md {
+      width: 280px;
+    }
+
+    @include sm {
+      display: none;
+    }
+    @include xs {
+      display: none;
+    }
   }
 }

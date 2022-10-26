@@ -21,6 +21,23 @@
     padding: 10px 0;
   }
 
+  &.show {
+    .header__menu-close {
+      display: block;
+
+      // @include sm {
+      //   display: none !important;
+      // }
+    }
+    .header__menu-btn {
+      display: none;
+    }
+
+    .header__menu-list {
+      transform: translateX(0);
+    }
+  }
+
   &__content {
     display: flex;
     align-items: center;
@@ -28,7 +45,9 @@
   }
 
   &__logo {
+    z-index: 100;
     width: 142px;
+    position: relative;
 
     @include lg {
       width: 120px;
@@ -43,7 +62,11 @@
     }
   }
 
-  &__menu,
+  &__menu {
+    gap: 70px;
+    display: flex;
+    align-items: center;
+  }
   &__menu-list {
     display: flex;
     align-items: center;
@@ -59,7 +82,24 @@
 
     @include sm {
       gap: 15px;
-      display: none;
+      // display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      position: absolute;
+      padding-top: 120px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: start;
+      transition: all 0.3s ease;
+      transform: translateX(-100%);
+
+      background: linear-gradient(
+        180deg,
+        rgba(254, 252, 247, 0.504981) 0%,
+        #fefcf7 55.94%
+      );
     }
   }
 
@@ -67,6 +107,8 @@
     a {
       position: relative;
       text-decoration: none;
+      // text-transform: uppercase;
+      // transition: color 0.3s ease;
       @include font(500, 17px, 20px, $headerNavTextcolor);
 
       @include lg {
@@ -78,13 +120,10 @@
       }
 
       @include sm {
-        // display: none;
         @include font(400, 12px, 14px, $headerNavTextcolor);
       }
-      @include xs {
-        // display: none;
-        @include font(400, 12px, 14px, $headerNavTextcolor);
-      }
+
+
       &::before {
         left: 50%;
         width: 0%;
@@ -120,24 +159,23 @@
       }
     }
   }
-  &__burger-menu  {
-    display: none;
-    position: relative;
-    width: 24px;
-    height: 2px;
-    background-color: #000000;
 
-    @include lg{
+  &__button {
+    @include sm {
       display: none;
     }
-    @include md{
-      display: none;
-    }
-    @include sm{
-      display: inline-block;
-    }
-    @include xs{
-      display: inline-block;
+  }
+
+  &__menu-btn {
+    display: none;
+
+    // position: relative;
+    // width: 24px;
+    // height: 2px;
+    // background-color: #000000;
+
+    @include sm {
+      display: block;
     }
 
     &::after,
@@ -158,5 +196,13 @@
     &::before {
       bottom: -6px;
     }
+  }
+
+  &__menu-close {
+    display: none;
+    z-index: 100;
+    position: relative;
+
+
   }
 }

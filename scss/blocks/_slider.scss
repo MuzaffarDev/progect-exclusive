@@ -1,5 +1,5 @@
 .slider {
-  padding: 55px 120px;
+  padding: 55px 0px;
   background-color: $slider-bg-color;
   &__title {
     @include font(500, 23px, 27px, $headerNavTextcolor);
@@ -18,11 +18,53 @@
     gap: 75px;
   }
 
-  &__item{
-
-  }
-  &__img{
+  &__img {
     width: 250px;
+
+    @include lg {
+      width: 300px;
+    }
+    @include md {
+      width: 280px;
+    }
+    @include sm {
+      width: 180px;
+    }
+    @include xs {
+      width: 150px;
+    }
+  }
+
+  &__navigation {
+    padding-top: 86px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .swiper-pagination-bullet {
+      border-radius: 50%;
+      cursor: pointer !important;
+      width: 10px;
+      height: 10px;
+      background-color: #979797;
+
+      &-active {
+        width: 14px;
+        height: 14px;
+        background-color: #717cff;
+      }
+    }
   }
 }
 
+.swiper {
+  overflow: hidden;
+
+  &-pagination {
+    bottom: -80px !important;
+  }
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}

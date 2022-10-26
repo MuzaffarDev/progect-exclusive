@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/slick.css" />
-    <link rel="stylesheet" href="./css/slick-theme.css.css" />
+
     <title>Exclusive landing page</title>
   </head>
   <body>
@@ -21,7 +24,7 @@
               </div>
               <div class="header__menu">
                 <ul class="header__menu-list">
-                  <li class="header__menu-item ">
+                  <li class="header__menu-item">
                     <a href="#">Home</a>
                   </li>
                   <li class="header__menu-item">
@@ -41,6 +44,13 @@
                   <button type="button">Apply</button>
                 </div>
               </div>
+              <button class="header__menu-btn">
+                <img src="./image/menu.svg" alt="" />
+              </button>
+              <button class="header__menu-close">
+                <img src="./image/close.svg" alt="" />
+              </button>
+              <!-- <span class="header__burger-menu"></span> -->
             </div>
           </div>
         </div>
@@ -54,7 +64,7 @@
           <div class="container">
             <div class="hero__content">
               <div class="hero__info">
-                <h1 class="hero__title webkit-box ">
+                <h1 class="hero__title webkit-box">
                   We Help to <span class="blue-text">Build </span><br />
                   Your Dream
                 </h1>
@@ -111,28 +121,35 @@
         <div class="slider">
           <h3 class="slider__title">Featured Universities</h3>
           <div class="container mb-3">
-            <ul class="slider__list autoplay-slider">
-              <li class="slider__item">
-                <div class="slider__img">
-                  <img src="./image/bitmap-1.png" alt="" />
-                </div>
-              </li>
-              <li class="slider__item">
-                <div class="slider__img">
-                  <img src="./image/Bitmap-2.png" alt="" />
-                </div>
-              </li>
-              <li class="slider__item">
-                <div class="slider__img">
-                  <img src="./image/bitmap-3.png" alt="" />
-                </div>
-              </li>
-              <li class="slider__item">
-                <div class="slider__img">
-                  <img src="./image/Bitmap-4.png" alt="" />
-                </div>
-              </li>
-            </ul>
+            <div class="swiper">
+              <ul class="swiper-pagination slider__navigation">
+                <li
+                  class="swiper-pagination-bullet slider__navigation-btn active"
+                ></li>
+              </ul>
+              <ul class="slider__list swiper-wrapper">
+                <li class="slider__item swiper-slide">
+                  <div class="slider__img">
+                    <img src="./image/bitmap-1.png" alt="" />
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="slider__img">
+                    <img src="./image/Bitmap-2.png" alt="" />
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="slider__img">
+                    <img src="./image/bitmap-3.png" alt="" />
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="slider__img">
+                    <img src="./image/Bitmap-4.png" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- end of slider -->
@@ -257,7 +274,7 @@
           <div class="container">
             <div class="content">
               <h4 class="news__title title mb-2">News</h4>
-              <p class="news__text text webkit-box webkit-box">
+              <p class="news__text text">
                 Sunt autem nusquam hoc epicurus in gravissimo bello
                 animadversionis metu degendae praesidia firmissima. Torquatos
                 nostros? quos tu paulo ante cum teneam sententiam, quid bonum
@@ -339,7 +356,7 @@
               <h4 class="upcoving__title title mb-2 webkit-box">
                 Upcoming University Events
               </h4>
-              <p class="upcoving__text text webkit-box">
+              <p class="upcoving__text text">
                 Sunt autem nusquam hoc epicurus in gravissimo bello
                 animadversionis metu degendae praesidia firmissima. Torquatos
                 nostros? quos tu paulo ante cum teneam sententiam, quid
@@ -353,12 +370,12 @@
                       <p class="num">26</p>
                       <p class="month">dec</p>
                     </div>
-                    <div class="upcoving__card-text webkit-box">
+                    <div class="upcoving__card-text">
                       Macquarie University, Sydney, Australia
                     </div>
                   </div>
-                  <div class="upcoving__card-info mb-2 webkit-box">
-                   Maiores voluptas laboriosam non dolorum perferendis fuga
+                  <div class="upcoving__card-info mb-2">
+                    Maiores voluptas laboriosam non dolorum perferendis fuga
                     repellat aut. Blanditiis quos in minus. Voluptatum quia quia
                     voluptas voluptatem vero ex possimus. I
                   </div>
@@ -391,7 +408,143 @@
                       Federation University, Australia
                     </div>
                   </div>
-                  <div class="upcoving__card-info mb-2 webkit-box">
+                  <div class="upcoving__card-info mb-2">
+                    Maiores voluptas laboriosam non dolorum perferendis fuga
+                    repellat aut. Blanditiis quos in minus. Voluptatum quia quia
+                    voluptas voluptatem vero ex possimus
+                  </div>
+                  <div class="upcoving__card-time">
+                    <a href="#" class="upcoving-link link"
+                      >Learn More
+                      <span
+                        ><img
+                          src="./image/arrow_forward_24px.svg"
+                          alt="" /></span
+                    ></a>
+                    <p class="datetime">
+                      <span
+                        ><img
+                          class="upcoving__time-icon"
+                          src="./image/time.svg"
+                          alt=""
+                      /></span>
+                      10:00 AM - 2:00 PM
+                    </p>
+                  </div>
+                </li>
+                <li class="upcoving__card-item upcoving-card">
+                  <div class="upcoving__card-title">
+                    <div class="upcoving__card-date">
+                      <p class="num">05</p>
+                      <p class="month">Apr</p>
+                    </div>
+                    <div class="upcoving__card-text">
+                      Federation University, Australia
+                    </div>
+                  </div>
+                  <div class="upcoving__card-info mb-2">
+                    Maiores voluptas laboriosam non dolorum perferendis fuga
+                    repellat aut. Blanditiis quos in minus. Voluptatum quia quia
+                    voluptas voluptatem vero ex possimus
+                  </div>
+                  <div class="upcoving__card-time">
+                    <a href="#" class="upcoving-link link"
+                      >Learn More
+                      <span
+                        ><img
+                          src="./image/arrow_forward_24px.svg"
+                          alt="" /></span
+                    ></a>
+                    <p class="datetime">
+                      <span
+                        ><img
+                          class="upcoving__time-icon"
+                          src="./image/time.svg"
+                          alt=""
+                      /></span>
+                      10:00 AM - 2:00 PM
+                    </p>
+                  </div>
+                </li>
+                <li class="upcoving__card-item upcoving-card">
+                  <div class="upcoving__card-title">
+                    <div class="upcoving__card-date">
+                      <p class="num">04</p>
+                      <p class="month">July</p>
+                    </div>
+                    <div class="upcoving__card-text">
+                      Federation University, Australia
+                    </div>
+                  </div>
+                  <div class="upcoving__card-info mb-2">
+                    Maiores voluptas laboriosam non dolorum perferendis fuga
+                    repellat aut. Blanditiis quos in minus. Voluptatum quia quia
+                    voluptas voluptatem vero ex possimus
+                  </div>
+                  <div class="upcoving__card-time">
+                    <a href="#" class="upcoving-link link"
+                      >Learn More
+                      <span
+                        ><img
+                          src="./image/arrow_forward_24px.svg"
+                          alt="" /></span
+                    ></a>
+                    <p class="datetime">
+                      <span
+                        ><img
+                          class="upcoving__time-icon"
+                          src="./image/time.svg"
+                          alt=""
+                      /></span>
+                      10:00 AM - 2:00 PM
+                    </p>
+                  </div>
+                </li>
+                <li class="upcoving__card-item upcoving-card">
+                  <div class="upcoving__card-title">
+                    <div class="upcoving__card-date">
+                      <p class="num">31</p>
+                      <p class="month">March</p>
+                    </div>
+                    <div class="upcoving__card-text">
+                      Federation University, Australia
+                    </div>
+                  </div>
+                  <div class="upcoving__card-info mb-2">
+                    Maiores voluptas laboriosam non dolorum perferendis fuga
+                    repellat aut. Blanditiis quos in minus. Voluptatum quia quia
+                    voluptas voluptatem vero ex possimus
+                  </div>
+                  <div class="upcoving__card-time">
+                    <a href="#" class="upcoving-link link"
+                      >Learn More
+                      <span
+                        ><img
+                          src="./image/arrow_forward_24px.svg"
+                          alt="" /></span
+                    ></a>
+                    <p class="datetime">
+                      <span
+                        ><img
+                          class="upcoving__time-icon"
+                          src="./image/time.svg"
+                          alt=""
+                      /></span>
+                      10:00 AM - 2:00 PM
+                    </p>
+                  </div>
+                </li>
+                <li class="upcoving__card-item upcoving-card">
+                  <div class="upcoving__card-title">
+                    <div class="upcoving__card-date">
+                      <p class="num">15</p>
+                      <p class="month">Spt</p>
+                    </div>
+                    <div class="upcoving__card-text">
+                      Federation University, Australia
+                    </div>
+                  </div>
+                  <div class="upcoving__card-info mb-2">
                     Maiores voluptas laboriosam non dolorum perferendis fuga
                     repellat aut. Blanditiis quos in minus. Voluptatum quia quia
                     voluptas voluptatem vero ex possimus
@@ -419,6 +572,7 @@
             </div>
           </div>
         </div>
+
         <!-- end of upcoving section  -->
 
         <!-- start countries section  -->
@@ -429,8 +583,7 @@
               <p class="countries__text text">
                 Sunt autem nusquam hoc epicurus in gravissimo bello
                 animadversionis metu degendae praesidia firmissima. Torquatos
-                nostros? quos tu paulo ante cum teneam sententiam, quid bonum
-                esse vult.
+                nostros? quos tu paulo ante cum teneam sententiam, quid
               </p>
             </div>
             <div class="countries__card">
@@ -476,16 +629,16 @@
         <div class="testimonial">
           <div class="container">
             <div class="content">
-              <h4 class="testimonial__title title  webkit-box mb-2">Testimonial</h4>
-              <p class="testimonial__text text webkit-thre-box">
+              <h4 class="testimonial__title title mb-2">Testimonial</h4>
+              <p class="testimonial__text text webkit-three-box">
                 Torquem detraxit hosti et quidem faciunt, ut et negent satis
                 esse appetendum, alterum. Si sine causa? quae fuerit causa, mox
                 videro; interea hoc epicurus in liberos.
               </p>
             </div>
             <div class="testimonial__card">
-              <ul class="testimonial__card-list ">
-                <li class="testimonial__card-item testimonial-card ">
+              <ul class="testimonial__card-list">
+                <li class="testimonial__card-item testimonial-card">
                   <div class="testimonial__card-wrap">
                     <div class="testimonial__card-img">
                       <img src="./image/testimonial-img-1.png" alt="" />
@@ -495,7 +648,7 @@
                       <p class="info__description">Reporter</p>
                     </div>
                   </div>
-                  <div class="testimonial__card-text webkit-thre-box">
+                  <div class="testimonial__card-text webkit-three-box">
                     Nisi cumque in necessitatibus molestiae eaque excepturi ab.
                     Laboriosam ipsam voluptatem voluptatibus labore quam nihil.
                     Quasi occaecati quos ratione quia aut molestiae velit et.
@@ -512,7 +665,7 @@
                       <p class="info__description">Landscape Architect</p>
                     </div>
                   </div>
-                  <div class="testimonial__card-text webkit-thre-box">
+                  <div class="testimonial__card-text webkit-three-box">
                     Aut consectetur voluptas. Voluptatem minus quo voluptas in
                     nulla iste. Fugiat alias sit sed dolorem quo. Qui
                     praesentium et doloribus minima neque. Facere debitis sed
@@ -530,7 +683,7 @@
                       <p class="info__description">Senior Developer</p>
                     </div>
                   </div>
-                  <div class="testimonial__card-text webkit-therebox">
+                  <div class="testimonial__card-text webkit-three-box">
                     Rem quia possimus eum adipisci autem aut sunt laboriosam
                     autem. Qui soluta ut aut excepturi dolorem laborum ut. Qui
                     alias aut provident quas illo. Eveniet debitis totam
@@ -548,7 +701,7 @@
         <div class="ready">
           <div class="container">
             <div class="ready__wrap">
-              <h2 class="ready__title webkit-box">Ready to chase your dreams?</h2>
+              <h2 class="ready__title">Ready to chase your dreams?</h2>
               <button class="ready__btn global-btn" type="button">
                 Apply Online
                 <span
@@ -562,68 +715,82 @@
           </div>
         </div>
         <!-- end of ready section  -->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrap">
+              <div class="footer__about">
+                <div class="footer__logo mb-2">
+                  <img src="./image/footer-Logo.svg" alt="#" />
+                </div>
+                <p class="footer__text webkit-box">
+                  Concord Royal Court (3rd floor) Dhanmondi, Dhaka 1209,
+                  Bangladesh.
+                </p>
+              </div>
+              <div class="footer__menu">
+                <ul class="footer__menu-list d-flex">
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> About Us</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Responsibilities</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Our Services</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="footer__menu-list d-flex">
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Disclaimer</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Testimonials</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Privacy Policy</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link"> Terms of Service</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__social">
+                <div class="footer__social-image">
+                  <a href="#">
+                    <img
+                      src="./image/facebook-footer.svg"
+                      alt="foote social icon "
+                    />
+                  </a>
+                </div>
+                <div class="footer__social-image">
+                  <a href="#">
+                    <img
+                      src="./image/twitter-footer.svg"
+                      alt="foote social icon "
+                    />
+                  </a>
+                </div>
+                <div class="footer__social-image">
+                  <a href="#">
+                    <img
+                      src="./image/instagram-footer.svg"
+                      alt="foote social icon "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="timedate">© 2020 Executive Trade International.</div>
+          </div>
+        </footer>
       </div>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__wrap">
-            <div class="footer__about">
-              <div class="footer__logo mb-2">
-                <img src="./image/footer-Logo.svg" alt="#" />
-              </div>
-              <p class="footer__text webkit-box">
-                Concord Royal Court (3rd floor) Dhanmondi, Dhaka 1209,
-                Bangladesh.
-              </p>
-              <div class="timedate">© 2020 Executive Trade International.</div>
-            </div>
-            <div class="footer__menu">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> About Us</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Responsibilities</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Our Services</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Contact</a>
-                </li>
-              </ul>
-
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Disclaimer</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Testimonials</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Privacy Policy</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link"> Terms of Service</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__social">
-              <div class="footer__social-image">
-                <img src="./image/facebook-footer.svg" alt="" />
-              </div>
-              <div class="footer__social-image">
-                <img src="./image/twitter-footer.svg" alt="" />
-              </div>
-              <div class="footer__social-image">
-                <img src="./image/instagram-footer.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-      <script src="./js/slick.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
       <script src="./js/main.js"></script>
     </div>
   </body>

@@ -1,50 +1,144 @@
 .footer {
-  padding: 65px 145px 45px;
+  padding: 65px 0px 50px;
   background: $violet;
 
-  &__wrap{
+  @include lg {
+    padding: 50px 0px 40px;
+  }
+  @include md {
+    padding: 40px 0px 30px;
+  }
+  @include sm {
+    padding: 30px 0px 20px;
+  }
+  @include xs {
+    padding: 15px 0px 10px;
+  }
+
+  &__wrap {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+
+    @include lg {
+    }
+    @include md {
+    }
+    @include sm {
+    }
+    @include xs {
+    }
   }
 
   &__about {
     width: 343px;
+
+    @include lg {
+      width: 300px;
+    }
+    @include md {
+      width: 270px;
+    }
+    @include sm {
+      width: 240px;
+    }
+    @include xs {
+      width: 220px;
+    }
   }
 
   &__logo {
     width: 160px;
 
+    @include lg {
+      width: 140px;
+    }
+    @include md {
+      width: 120px;
+    }
+    @include sm {
+      width: 110px;
+    }
+    @include xs {
+      width: 90px;
+    }
   }
 
   &__text {
     @include font(500, 18px, 32px, #eeeeee);
     margin-bottom: 58px;
+
+    @include lg {
+    }
+    @include md {
+    }
+    @include sm {
+    }
+    @include xs {
+    }
   }
 
   .timedate {
     @include font(700, 18px, 32px, #eeeeee);
-  }
 
-  &__menu{
-    display: flex;
-      align-items: flex-end;
-      gap: 100px;
-
-
-    &-link{
-      font-weight: 500;
-font-size: 18px;
-line-height: 49px;
-color: #EEEEEE;
+    @include lg {
+    }
+    @include md {
+    }
+    @include sm {
+    }
+    @include xs {
     }
   }
 
-  &__social{
+  &__menu {
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+
+
+    @include lg {
+      gap: 90px;
+    }
+    @include md {
+      gap: 80px;
+    }
+    @include sm {
+      gap: 70px;
+    }
+    @include xs {
+      gap: 60px;
+    }
+
+    &-link {
+      @include font(500, 18px, 0px, #eeeeee);
+
+      @include lg {
+        @include font(500, 16px, 0px, #eeeeee);
+      }
+      @include md {
+        @include font(500, 14px, 0px, #eeeeee);
+      }
+      @include sm {
+        @include font(500, 12px, 0px, #eeeeee);
+      }
+      @include xs {
+        @include font(500, 10px, 0px, #eeeeee);
+      }
+    }
+  }
+
+  &__social {
     display: flex;
     align-items: center;
     gap: 28px;
+    @include lg {
+    }
+    @include md {
+    }
+    @include sm {
+    }
+    @include xs {
+    }
   }
 }
-
-

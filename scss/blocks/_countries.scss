@@ -1,15 +1,58 @@
 .countries {
-  padding: 80px 120px;
+  padding: 80px 0px;
   background: $slider-bg-color;
 
-  &__card {
-    padding: 70px 0;
+  @include lg {
+    padding: 60px 0px;
+  }
+  @include md {
+    padding: 40px 0px;
+  }
+  @include sm {
+    padding: 20px 0px;
+  }
+  @include xs {
+    padding: 10px 0px;
+  }
 
+  &__text {
+    margin-bottom: 75px;
+
+    @include lg {
+      margin-bottom: 60px;
+    }
+
+    @include md {
+      margin-bottom: 40px;
+    }
+    @include sm {
+      margin-bottom: 30px;
+    }
+
+    @include xs {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card {
     &-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 45px;
+
+      @include lg {
+        gap: 32px;
+      }
+      @include md {
+        gap: 28px;
+      }
+      @include sm {
+        gap: 24px;
+      }
+      @include xs {
+        gap: 20px;
+      }
     }
 
     &-item {
@@ -17,12 +60,45 @@
     }
 
     &-title {
-      @include font(900, 25px, 29px, #37474f);
       margin-bottom: 10px;
+      @include font(900, 25px, 29px, #37474f);
+
+      @include lg {
+        margin-bottom: 10px;
+        @include font(900, 22px, 24px, #37474f);
+      }
+
+      @include md {
+        margin-bottom: 10px;
+        @include font(900, 20px, 20px, #37474f);
+      }
+
+      @include sm {
+        margin-bottom: 10px;
+        @include font(900, 18px, 16px, #37474f);
+      }
+
+      @include xs {
+        margin-bottom: 10px;
+        @include font(900, 16px, 16px, #37474f);
+      }
     }
 
     &-text {
-      @include font(500,16px,27px,rgba(55, 71, 79, 0.721569));
+      @include font(500, 16px, 27px, rgba(55, 71, 79, 0.721569));
+
+      @include lg {
+        @include font(500, 16px, 27px, rgba(55, 71, 79, 0.721569));
+      }
+      @include md {
+        @include font(500, 16px, 25px, rgba(55, 71, 79, 0.721569));
+      }
+      @include sm {
+        @include font(500, 15px, 24px, rgba(55, 71, 79, 0.721569));
+      }
+      @include xs {
+        @include font(500, 14px, 20px, rgba(55, 71, 79, 0.721569));
+      }
     }
   }
 }

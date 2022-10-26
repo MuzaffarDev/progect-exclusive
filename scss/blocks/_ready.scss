@@ -2,14 +2,56 @@
   padding: 82px 0px 74px;
   background: $slider-bg-color;
 
+  @include lg {
+    padding: 72px 0px 70px;
+  }
+  @include md {
+    padding: 64px 0px 64px;
+  }
+  @include sm {
+    padding: 56px 0px 56px;
+  }
+  @include xs {
+    padding: 48px 0px 48px;
+  }
+
   &__wrap {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 392px;
+
+    @include lg {
+    }
+    @include md {
+      flex-direction: column;
+      gap: 25px;
+    }
+    @include sm {
+      flex-direction: column;
+      gap: 20px;
+
+    }
+    @include xs {
+      flex-direction: column;
+      gap: 18px;
+
+    }
   }
 
   &__title {
-    @include font(700,37px,43px,#252525)
+    @include font(700, 37px, 43px, #252525);
 
+    @include lg {
+      @include font(700, 34px, 40px, #252525);
+    }
+    @include md {
+      @include font(700, 27px, 28px, #252525);
+    }
+    @include sm {
+      @include font(700, 22px, 24px, #252525);
+    }
+    @include xs {
+      @include font(500, 16px, 20px, #252525);
+    }
   }
 }
