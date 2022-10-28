@@ -1,0 +1,121 @@
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  position: fixed;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.667);
+
+  &.show {
+    visibility: visible;
+  }
+
+  &__wrapper {
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 16px;
+    background-color: #fff;
+    transition: top 0.2s linear;
+    transform: translate(-50%, -50%);
+  }
+  &__head {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: 16px;
+    }
+
+    button {
+      width: 20px;
+      border: none;
+      position: relative;
+      background-color: transparent;
+
+      &::after,
+      &::before {
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #00000080;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  form {
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form > input,
+  select {
+    width: 300px;
+    height: 56px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #4682b4;
+    line-height: 24px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-transform: capitalize;
+    border: 1px solid #4682b4;
+    background-color: #ffffff;
+  }
+  form > input:hover {
+    box-shadow: 0px 0px 3px 3px steelblue;
+  }
+
+  ::placeholder {
+    color: #4682b4;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  // modal__btn ni orab turgan btn yoq bolganda! shu joyda modal__btn ga margin 0 auto bersa tog'ri bolarmidi?
+  &__btn {
+    width: 100px;
+    cursor: pointer;
+    color: #4682b4;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-transform: capitalize;
+    border: 1px solid #4682b4;
+    background-color: #ffffff;
+
+    &:hover {
+      box-shadow: 0px 0px 3px 3px steelblue;
+    }
+  }
+}

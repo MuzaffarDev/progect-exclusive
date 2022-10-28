@@ -3,18 +3,14 @@
   background: $header-bg-color;
 
   @include lg {
-    padding: 80px 0px;
-  }
-
-  @include md {
     padding: 60px 0px;
   }
 
-  @include sm {
+  @include md {
     padding: 40px 0px;
   }
 
-  @include xs {
+  @include sm {
     padding: 20px 0px;
   }
 
@@ -22,18 +18,14 @@
     margin-bottom: 100px;
 
     @include lg {
-      margin-bottom: 90px;
-    }
-
-    @include md {
-      margin-bottom: 80px;
-    }
-    @include sm {
-      margin-bottom: 70px;
-    }
-
-    @include xs {
       margin-bottom: 60px;
+    }
+    @include md {
+      margin-bottom: 40px;
+    }
+
+    @include sm {
+      margin-bottom: 30px;
     }
   }
 
@@ -45,24 +37,22 @@
       gap: 47px;
 
       @include lg {
-        gap: 42px;
-      }
-      @include md {
-        gap: 38px;
-      }
-      @include sm {
         gap: 32px;
       }
-      @include xs {
-        gap: 30px;
+      @include md {
+        gap: 22px;
+      }
+      @include sm {
+        gap: 10px;
       }
     }
 
     &-title {
-      display: flex;
-      align-items: center;
       gap: 20px;
+      display: flex;
       margin-bottom: 28px;
+      align-items: center;
+
 
       @include lg {
         gap: 18px;
@@ -83,15 +73,15 @@
     }
 
     &-date {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       width: 76px;
       height: 76px;
-      background-color: #717cff20;
-      border-radius: 11px;
+      display: flex;
       overflow: hidden;
+      border-radius: 11px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #717cff20;
 
       @include lg {
         height: 64px;
@@ -218,35 +208,3 @@
     }
   }
 }
-
-// .swiper {
-//   &__navigation {
-//     padding-top: 86px !important;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 20px;
-//     .swiper-pagination-bullet {
-//       border-radius: 50%;
-//       cursor: pointer !important;
-//       width: 10px;
-//       height: 10px;
-//       background-color: #979797;
-
-//       &-active {
-//         width: 14px;
-//         height: 14px;
-//         background-color: #717cff;
-//       }
-//     }
-//   }
-//   overflow: hidden;
-
-//   &-pagination {
-//     bottom: -80px !important;
-//   }
-// }
-
-// .swiper-wrapper {
-//   transition-timing-function: linear !important;
-// }

@@ -9,10 +9,7 @@
     padding: 60px 0px;
   }
   @include sm {
-    padding: 40px 0px;
-  }
-  @include xs {
-    padding: 30px 0px;
+    padding: 10px 0px;
   }
 
   &__text {
@@ -22,13 +19,10 @@
       margin-bottom: 100px;
     }
     @include md {
-      margin-bottom: 80px;
+      margin-bottom: 50px;
     }
     @include sm {
-      margin-bottom: 60px;
-    }
-    @include xs {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
 
@@ -41,11 +35,9 @@
     @include md {
       margin-bottom: 60px;
     }
+
     @include sm {
-      margin-bottom:40px;
-    }
-    @include xs {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     &-list {
@@ -61,15 +53,29 @@
         gap: 36px;
       }
       @include sm {
-        gap: 32px;
-      }
-      @include xs {
-        gap: 30px;
+        gap: 20px;
       }
     }
 
-    &-item {
-      word-break: break-all;
+    &-img {
+      overflow: hidden;
+      border-radius: 11px;
+      width: 100%;
+      height: 225px;
+      object-fit: cover;
+
+      @include lg {
+        border-radius: 11px;
+        height: 200px;
+      }
+      @include md {
+        border-radius: 10px;
+        height: 180px;
+      }
+      @include sm {
+        border-radius: 9px;
+        height: 150px;
+      }
     }
 
     &-description {
@@ -79,21 +85,19 @@
         padding: 24px 24px 54px 24px;
       }
       @include md {
-        padding: 22px 22px 50px 24px;
+        padding: 20px 20px 30px 20px;
       }
+
       @include sm {
-        padding: 20px 20px 48px 20px;
-      }
-      @include xs {
-        padding: 18px 18px 46px 18px;
+        padding: 10px 10px 20px 10px;
       }
     }
 
     &-date {
-      display: flex;
-      align-items: center;
       gap: 12px;
+      display: flex;
       margin-bottom: 15px;
+      align-items: center;
       @include font(900, 16px, 19px, #565656);
 
       @include lg {
@@ -106,12 +110,8 @@
         margin-bottom: 10px;
         @include font(900, 14px, 16px, #565656);
       }
+
       @include sm {
-        gap: 6px;
-        margin-bottom: 8px;
-        @include font(900, 12px, 14px, #565656);
-      }
-      @include xs {
         gap: 4px;
         margin-bottom: 6px;
         @include font(900, 10px, 12px, #565656);
@@ -119,19 +119,18 @@
     }
 
     &-text {
+      @include sliceTextWebekit(2);
       @include font(700, 22px, 26px, #252525);
 
       @include lg {
-        @include font(700, 20px, 24px,  #252525);
+        @include font(700, 20px, 24px, #252525);
       }
       @include md {
-        @include font(700, 18px, 22px,  #252525);
+        @include font(700, 18px, 22px, #252525);
       }
+
       @include sm {
-        @include font(700, 16px, 20px,  #252525);
-      }
-      @include xs {
-        @include font(700, 14px, 18px,  #252525);
+        @include font(700, 14px, 18px, #252525);
       }
     }
   }

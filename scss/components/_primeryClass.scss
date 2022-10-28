@@ -1,38 +1,19 @@
 .mb-1 {
   margin-bottom: 10px;
-
-  @include lg {
-    margin-bottom: 8px;
-  }
-
-  @include md {
-    margin-bottom: 6px;
-  }
-  @include sm {
-    margin-bottom: 4px;
-  }
-
-  @include xs {
-    margin-bottom: 2px;
-  }
 }
 
 .mb-2 {
   margin-bottom: 25px;
 
   @include lg {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   @include md {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
   @include sm {
-    margin-bottom: 10px;
-  }
-
-  @include xs {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 }
 
@@ -40,18 +21,14 @@
   margin-bottom: 100px;
 
   @include lg {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   @include md {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   @include sm {
-    margin-bottom: 40px;
-  }
-
-  @include xs {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -71,12 +48,7 @@
 
   @include sm {
     letter-spacing: -0.4625px;
-    @include font(700, 26px, 30px, $headerNavTextcolor);
-  }
-
-  @include xs {
-    letter-spacing: -0.4625px;
-    @include font(700, 17px, 24px, $headerNavTextcolor);
+    @include font(700, 20px, 20px, $headerNavTextcolor);
   }
 }
 
@@ -92,11 +64,7 @@
   }
 
   @include sm {
-    @include font(500, 16px, 24px, $globalTextColor);
-  }
-
-  @include xs {
-    @include font(500, 14px, 22px, $globalTextColor);
+    @include font(500, 14px, 20px, $globalTextColor);
   }
 }
 
@@ -128,27 +96,11 @@
 
 @for $var from 1 to 101 {
   .width-#{$var} {
-    width: #{$var}+"%";
+    width: #{$var}+ "%";
   }
 }
 
-@mixin sliceText($number) {
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: $number !important;
-  -webkit-box-orient: vertical !important;
-}
-
-.convert {
-  display: inline-block;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: no-wrap;
-  overflow: hidden;
-}
 
 .d-flex {
-  gap: 35px;
   display: flex;
-  flex-direction: column;
 }

@@ -13,6 +13,29 @@
     <title>Exclusive landing page</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="modal__backdrop">
+        <div class="modal__wrapper">
+          <div class="modal__head">
+            <h1>Modal title</h1>
+            <button class="close"></button>
+          </div>
+          <div class="modal__body">
+            <form class="form__modal" action="GET">
+              <label class="visually-hidden" for="">Firstname</label>
+              <input type="name" placeholder="Firstname" />
+              <label class="visually-hidden" for="">Lastname</label>
+              <input type="name" / placeholder="Lastname">
+              <label class="visually-hidden" for="">email</label>
+              <input type="email" placeholder="email" />
+              <div class="btn">
+                <button class="modal__btn" type="submit">login in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <div class="wapper__base">
         <!-- start of header -->
@@ -43,13 +66,10 @@
                 <div class="header__button">
                   <button type="button">Apply</button>
                 </div>
+                <span class="header__menu-burger"></span>
+                <span class="header__close-btn"></span>
               </div>
-              <button class="header__menu-btn">
-                <img src="./image/menu.svg" alt="" />
-              </button>
-              <button class="header__menu-close">
-                <img src="./image/close.svg" alt="" />
-              </button>
+
               <!-- <span class="header__burger-menu"></span> -->
             </div>
           </div>
@@ -64,7 +84,7 @@
           <div class="container">
             <div class="hero__content">
               <div class="hero__info">
-                <h1 class="hero__title webkit-box">
+                <h1 class="hero__title">
                   We Help to <span class="blue-text">Build </span><br />
                   Your Dream
                 </h1>
@@ -159,7 +179,7 @@
           <div class="container">
             <div class="our__services-content content">
               <h2 class="our__services-title title mb-2">Our Services</h2>
-              <p class="our__services-text text webkit-box">
+              <p class="our__services-text text">
                 Executive Trade International is an University Application
                 Centre, guiding Bangladeshi students to Australian, British,
                 Canadian and Irish universities!
@@ -173,14 +193,15 @@
                   </div>
                   <div class="services__card-info mb-2">
                     <h4 class="services__card-title mb-1">
-                      Career Counselling
+                      Career Counselling Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Sequi, quod!
                     </h4>
-                    <p class="services__card-text webkit-box">
+                    <p class="services__card-text">
                       Maiores voluptas laboriosam non dolorum perferendis fuga
                       repellat aut. Blanditiis quos in minus. Voluptatum
                     </p>
                   </div>
-                  <a href="" class="services__card-link link"
+                  <a href="#" class="services__card-link link"
                     >Learn More
                     <span
                       ><img src="./image/arrow_forward_24px.svg" alt=""
@@ -195,12 +216,12 @@
                     <h4 class="services__card-title mb-1">
                       University Admissions
                     </h4>
-                    <p class="services__card-text webkit-box">
+                    <p class="services__card-text">
                       Maiores voluptas laboriosam non dolorum perferendis fuga
                       repellat aut. Blanditiis quos in minus.
                     </p>
                   </div>
-                  <a href="" class="services__card-link link"
+                  <a href="#" class="services__card-link link"
                     >Learn More
                     <span
                       ><img src="./image/arrow_forward_24px.svg" alt=""
@@ -213,12 +234,12 @@
                   </div>
                   <div class="services__card-info mb-2">
                     <h4 class="services__card-title mb-1">Visa Consultancy</h4>
-                    <p class="services__card-text webkit-box">
+                    <p class="services__card-text">
                       Maiores voluptas laboriosam non dolorum perferendis fuga
                       repellat aut. dicta accusantium fugiat.
                     </p>
                   </div>
-                  <a href="" class="services__card-link link"
+                  <a href="#" class="services__card-link link"
                     >Learn More
                     <span
                       ><img src="./image/arrow_forward_24px.svg" alt=""
@@ -231,12 +252,12 @@
                   </div>
                   <div class="services__card-info mb-2">
                     <h4 class="services__card-title mb-1">Accommodation</h4>
-                    <p class="services__card-text webkit-box">
+                    <p class="services__card-text">
                       Maiores voluptas laboriosam non dolorum perferendis fuga
                       repellat aut. Blanditiis dicta accusantium fugiat.
                     </p>
                   </div>
-                  <a href="" class="services__card-link link"
+                  <a href="#" class="services__card-link link"
                     >Learn More
                     <span
                       ><img src="./image/arrow_forward_24px.svg" alt=""
@@ -251,12 +272,12 @@
                     <h4 class="services__card-title mb-1">
                       Pre-Departure Briefing
                     </h4>
-                    <p class="services__card-text webkit-box">
+                    <p class="services__card-text">
                       Maiores voluptas laboriosam non dolorum perferendis fuga
                       repellat aut. dolorem dicta accusantium fugiat.
                     </p>
                   </div>
-                  <a href="" class="services__card-link link"
+                  <a href="#" class="services__card-link link"
                     >Learn More
                     <span
                       ><img src="./image/arrow_forward_24px.svg" alt=""
@@ -285,7 +306,7 @@
               <ul class="news__card-list">
                 <li class="news__card-item news-card">
                   <div class="news__card-img">
-                    <img src="./image/Rectangle-1.png" alt="" />
+                    <img src="https://picsum.photos/id/32/200/300" alt="" />
                   </div>
 
                   <div class="news__card-description">
@@ -302,7 +323,7 @@
                 </li>
                 <li class="news__card-item news-card">
                   <div class="news__card-img">
-                    <img src="./image/Rectangle-2.png" alt="" />
+                    <img src="https://picsum.photos/id/89/200/700" alt="" />
                   </div>
 
                   <div class="news__card-description">
@@ -312,14 +333,14 @@
                       /></span>
                       17 Apr 2020
                     </div>
-                    <h6 class="news__card-text webkit-box">
+                    <h6 class="news__card-text">
                       Trump Lays Plans to Reverse Obama's Climate Change .
                     </h6>
                   </div>
                 </li>
                 <li class="news__card-item news-card">
                   <div class="news__card-img">
-                    <img src="./image/Rectangle-3.png" alt="" />
+                    <img src="https://picsum.photos/id/75/200/300" alt="" />
                   </div>
 
                   <div class="news__card-description">
@@ -329,7 +350,7 @@
                       /></span>
                       17 Apr 2020
                     </div>
-                    <h6 class="news__card-text webkit-box">
+                    <h6 class="news__card-text">
                       How a Little Bit of Hydra Regrows a Whole Animal.
                     </h6>
                   </div>
@@ -353,7 +374,7 @@
         <div class="upcoving">
           <div class="container">
             <div class="content">
-              <h4 class="upcoving__title title mb-2 webkit-box">
+              <h4 class="upcoving__title title mb-2">
                 Upcoming University Events
               </h4>
               <p class="upcoving__text text">
@@ -590,7 +611,7 @@
               <ul class="countries__card-list">
                 <li class="countries__card-item countries-card">
                   <div class="countries__card-img mb-2">
-                    <img src="./image/australia.png" alt="" />
+                    <img src="https://picsum.photos/id/44/200/300" alt="" />
                   </div>
                   <h4 class="countries__card-title">Study in Australia</h4>
                   <p class="countries__card-text">
@@ -600,7 +621,7 @@
                 </li>
                 <li class="countries__card-item countries-card">
                   <div class="countries__card-img mb-2">
-                    <img src="./image/canada.png" alt="" />
+                    <img src="https://picsum.photos/id/55/200/300" alt="" />
                   </div>
                   <h4 class="countries__card-title">Study in Canada</h4>
                   <p class="countries__card-text">
@@ -611,7 +632,7 @@
 
                 <li class="countries__card-item countries-card">
                   <div class="countries__card-img mb-2">
-                    <img src="./image/uk.png" alt="" />
+                    <img src="https://picsum.photos/id/99/200/300" alt="" />
                   </div>
                   <h4 class="countries__card-title">Study in Uk</h4>
                   <p class="countries__card-text">
@@ -630,7 +651,7 @@
           <div class="container">
             <div class="content">
               <h4 class="testimonial__title title mb-2">Testimonial</h4>
-              <p class="testimonial__text text webkit-three-box">
+              <p class="testimonial__text text webkit">
                 Torquem detraxit hosti et quidem faciunt, ut et negent satis
                 esse appetendum, alterum. Si sine causa? quae fuerit causa, mox
                 videro; interea hoc epicurus in liberos.
@@ -641,14 +662,14 @@
                 <li class="testimonial__card-item testimonial-card">
                   <div class="testimonial__card-wrap">
                     <div class="testimonial__card-img">
-                      <img src="./image/testimonial-img-1.png" alt="" />
+                      <img src="https://picsum.photos/id/1027/200/300" alt="" />
                     </div>
                     <div class="testimonial__card-info info">
                       <h6 class="info__title">Harrison Phillips</h6>
                       <p class="info__description">Reporter</p>
                     </div>
                   </div>
-                  <div class="testimonial__card-text webkit-three-box">
+                  <div class="testimonial__card-text">
                     Nisi cumque in necessitatibus molestiae eaque excepturi ab.
                     Laboriosam ipsam voluptatem voluptatibus labore quam nihil.
                     Quasi occaecati quos ratione quia aut molestiae velit et.
@@ -658,14 +679,14 @@
                 <li class="testimonial__card-item testimonial-card">
                   <div class="testimonial__card-wrap">
                     <div class="testimonial__card-img">
-                      <img src="./image/testimonial-img-2.png" alt="" />
+                      <img src="https://picsum.photos/id/319/200/300" alt="" />
                     </div>
                     <div class="testimonial__card-info info">
                       <h6 class="info__title">Ainara Vergara</h6>
                       <p class="info__description">Landscape Architect</p>
                     </div>
                   </div>
-                  <div class="testimonial__card-text webkit-three-box">
+                  <div class="testimonial__card-text webkit">
                     Aut consectetur voluptas. Voluptatem minus quo voluptas in
                     nulla iste. Fugiat alias sit sed dolorem quo. Qui
                     praesentium et doloribus minima neque. Facere debitis sed
@@ -676,14 +697,14 @@
                 <li class="testimonial__card-item testimonial-card">
                   <div class="testimonial__card-wrap">
                     <div class="testimonial__card-img">
-                      <img src="./image/testimonoial-img-3.png" alt="" />
+                      <img src="https://picsum.photos/id/1001/200/300" alt="" />
                     </div>
                     <div class="testimonial__card-info info">
                       <h6 class="info__title">Niek Bove</h6>
                       <p class="info__description">Senior Developer</p>
                     </div>
                   </div>
-                  <div class="testimonial__card-text webkit-three-box">
+                  <div class="testimonial__card-text webkit">
                     Rem quia possimus eum adipisci autem aut sunt laboriosam
                     autem. Qui soluta ut aut excepturi dolorem laborum ut. Qui
                     alias aut provident quas illo. Eveniet debitis totam
@@ -702,33 +723,36 @@
           <div class="container">
             <div class="ready__wrap">
               <h2 class="ready__title">Ready to chase your dreams?</h2>
-              <button class="ready__btn global-btn" type="button">
-                Apply Online
-                <span
-                  ><img
-                    class="btn-icon"
-                    src="./image/arrow_forward_24px.svg"
-                    alt=""
-                /></span>
-              </button>
+              <div>
+                <button class="open ready__btn global-btn" type="button">
+                  Apply Online
+                  <span
+                    ><img
+                      class="btn-icon"
+                      src="./image/arrow_forward_24px.svg"
+                      alt=""
+                  /></span>
+                </button>
+                <!-- <button class="open global-btn">Open Modal</button> -->
+              </div>
             </div>
           </div>
         </div>
         <!-- end of ready section  -->
         <footer class="footer">
           <div class="container">
-            <div class="footer__wrap">
+            <div class="footer__wrap mb-1">
               <div class="footer__about">
                 <div class="footer__logo mb-2">
                   <img src="./image/footer-Logo.svg" alt="#" />
                 </div>
-                <p class="footer__text webkit-box">
+                <p class="footer__text">
                   Concord Royal Court (3rd floor) Dhanmondi, Dhaka 1209,
                   Bangladesh.
                 </p>
               </div>
               <div class="footer__menu">
-                <ul class="footer__menu-list d-flex">
+                <ul class="footer__menu-list">
                   <li class="footer__menu-item">
                     <a href="#" class="footer__menu-link"> About Us</a>
                   </li>
@@ -743,7 +767,7 @@
                   </li>
                 </ul>
 
-                <ul class="footer__menu-list d-flex">
+                <ul class="footer__menu-list">
                   <li class="footer__menu-item">
                     <a href="#" class="footer__menu-link"> Disclaimer</a>
                   </li>
@@ -792,7 +816,7 @@
 
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
       <script src="./js/main.js">
-      // oxshamadi 
+        // oxshamadi
       </script>
     </div>
   </body>

@@ -1,37 +1,66 @@
 .slider {
   padding: 55px 0px;
   background-color: $slider-bg-color;
+
+  @include lg {
+    padding: 20px 0;
+  }
+
+  @include md {
+    padding: 15px 0;
+  }
+
+  @include sm {
+    padding: 10px 0;
+  }
+
   &__title {
-    @include font(500, 23px, 27px, $headerNavTextcolor);
     opacity: 0.73;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2.1px;
     margin-bottom: 85px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    @include font(500, 23px, 27px, $headerNavTextcolor);
+
+    @include lg {
+      margin-bottom: 40px;
+      @include font(500, 22px, 24px, $headerNavTextcolor);
+    }
+
+    @include md {
+      margin-bottom: 30px;
+      @include font(500, 16px, 20px, $headerNavTextcolor);
+    }
+
+    @include sm {
+      margin-bottom: 20px;
+      @include font(500, 14px, 16px, $headerNavTextcolor);
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-bottom: 100px;
+    justify-content: space-between;
     gap: 75px;
   }
 
   &__img {
     width: 250px;
+    gap: 75px;
 
     @include lg {
-      width: 300px;
+      width: 280px;
+      gap: 50px;
     }
     @include md {
-      width: 280px;
+      width: 180px;
+      gap: 40px;
     }
     @include sm {
-      width: 180px;
-    }
-    @include xs {
       width: 150px;
+      gap: 30px;
     }
   }
 
@@ -41,6 +70,16 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @include lg {
+      gap: 15px;
+    }
+    @include md {
+      gap: 10px;
+    }
+    @include sm {
+      gap: 5px;
+    }
     .swiper-pagination-bullet {
       border-radius: 50%;
       cursor: pointer !important;
@@ -48,10 +87,28 @@
       height: 10px;
       background-color: #979797;
 
+      @include md {
+        width: 8px;
+        height: 8px;
+      }
+      @include sm {
+        width: 4px;
+        height: 4px;
+      }
+
       &-active {
         width: 14px;
         height: 14px;
         background-color: #717cff;
+
+        @include md {
+          width: 8px;
+          height: 8px;
+        }
+        @include sm {
+          width: 4px;
+          height: 4px;
+        }
       }
     }
   }
@@ -61,7 +118,7 @@
   overflow: hidden;
 
   &-pagination {
-    bottom: -80px !important;
+    // bottom: -80px !important;
   }
 }
 

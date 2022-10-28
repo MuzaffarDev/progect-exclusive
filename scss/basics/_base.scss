@@ -51,20 +51,17 @@ body {
   }
 
   @include sm {
-    width: 300px;
-  }
-
-  @include xs {
-    width: 200px;
+    width: 100%;
   }
 }
 
 .card {
   width: 344px;
+  cursor: pointer;
   border-radius: 15px;
-  transition: all 2s ease;
   background: $card-bg-white;
   padding: 30px 15px 30px 30px;
+  transition: transform 0.5s ease;
   box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
 
   @include lg {
@@ -76,26 +73,21 @@ body {
     padding: 24px 12px 24px 24px;
   }
   @include sm {
-    width: 260px;
+    width: 100%;
     padding: 18px 8px 18px 18px;
-  }
-  @include xs {
-    width: 250px;
-    padding: 16px 8px 16px 16px;
   }
 
   &:hover {
-    scale: 1.1;
-    cursor: pointer;
-    transition: all 2s ease;
+    transform: scale(1.1);
   }
 }
 
 .news-card {
   width: 344px;
+  cursor: pointer;
   border-radius: 15px;
-  transition: all 2s ease;
   background: $card-bg-white;
+  transition: transform 0.5s ease;
   box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
 
   @include lg {
@@ -105,25 +97,21 @@ body {
     width: 280px;
   }
   @include sm {
-    width: 260px;
-  }
-  @include xs {
-    width: 200px;
+    width: 100%;
   }
 
   &:hover {
-    scale: 1.1;
-    cursor: pointer;
-    transition: all 2s ease;
+    transform: scale(1.1);
   }
 }
 
 .upcoving-card {
-  padding: 30px;
   width: 540px;
+  padding: 30px;
+  cursor: pointer;
   border-radius: 15px;
-  transition: all 2s ease;
   background: $card-bg-white;
+  transition: transform 0.5s ease;
   box-shadow: 0px 6px 42px rgba(0, 0, 0, 0.103884);
 
   @include lg {
@@ -136,42 +124,33 @@ body {
   }
   @include sm {
     padding: 18px;
-    width: 250px;
-  }
-  @include xs {
-    padding: 16px;
-    width: 210px;
+    width: 100%;
   }
 
   &:hover {
-    scale: 1.1;
-    cursor: pointer;
-    transition: all 2s ease;
+    transform: scale(1.1);
   }
 }
 
 .countries-card {
   width: 348px;
-  border-radius: 15px;
   cursor: pointer;
+  border-radius: 15px;
+  background: transparent;
   transition: transform 0.5s ease;
 
-
   @include lg {
-    padding: 24px;
     width: 400px;
+    padding: 24px;
   }
   @include md {
-    padding: 20px;
     width: 300px;
+    padding: 20px;
   }
   @include sm {
-    padding: 18px;
-    width: 250px;
-  }
-  @include xs {
-    padding: 16px;
-    width: 210px;
+    width: 100%;
+    padding: 0px;
+    transform: scale(1);
   }
 
   &:hover {
@@ -184,8 +163,9 @@ body {
   cursor: pointer;
   padding: 44px 34px;
   border-radius: 29px;
-  box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
   transition: transform 0.5s ease;
+  box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+
   @include lg {
     width: 350px;
     padding: 40px 30px;
@@ -197,14 +177,9 @@ body {
     border-radius: 26px;
   }
   @include sm {
-    width: 300px;
-    padding: 32px 24px;
+    width: 100%;
+    padding: 16px 16px;
     border-radius: 25px;
-  }
-  @include xs {
-    width: 210px;
-    padding: 30px 20px;
-    border-radius: 24px;
   }
 
   &:hover {

@@ -64,7 +64,7 @@ itemBtn.forEach((item) => {
 // });
 const swiper = new Swiper(".swiper", {
   // Optional parameters
-  slidesPerView: 2,
+  slidesPerView: 4,
   paginationClickable: true,
   // speed: 6000,
   // autoplay: {
@@ -88,10 +88,31 @@ const swiper = new Swiper(".swiper", {
   // And if we need scrollbar
 });
 
-//  modal section 
-document.querySelector(".header__menu-btn").addEventListener("click", () => {
+
+// burger menu
+document.querySelector(".header__menu-burger").addEventListener("click", () => {
   let header = document.querySelector(".header").classList.add("show");
 });
-document.querySelector(".header__menu-close").addEventListener("click", () => {
+document.querySelector(".header__close-btn").addEventListener("click", () => {
   let header = document.querySelector(".header").classList.remove("show");
 });
+
+//  modal section
+let elModalOpenBtn = document.querySelector(".open");
+let elModalCloseBtn = document.querySelector(".close");
+let elModal = document.querySelector(".modal");
+let elModalWrapper = document.querySelector(".modal__wrapper");
+
+elModalOpenBtn.addEventListener("click", () => {
+  elModal.classList.add("show");
+  elModalWrapper.style.top = "50%";
+});
+
+elModalCloseBtn.addEventListener("click", () => {
+  elModalWrapper.style.top = "40%";
+  setTimeout(() => {
+    elModal.classList.remove("show");
+  }, 200);
+});
+
+

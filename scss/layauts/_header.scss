@@ -127,18 +127,11 @@
     height: 2px;
     background-color: #000000;
 
-    @include lg{
-      display: none;
-    }
-    @include md{
-      display: none;
-    }
+
     @include sm{
       display: inline-block;
     }
-    @include xs{
-      display: inline-block;
-    }
+    
 
     &::after,
     &::before {
